@@ -51,7 +51,7 @@ def result():
 
         similarity = cosine_similarity(matrix[0:1], matrix[1:2])
 
-        score = round(similarity[0][0] * 100, 2)
+        score = round(similarity[0][0] * 100, 1)
 
         status = "Shortlisted" if score > 20 else "Rejected"
 
