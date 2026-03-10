@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Upload Resumes</title>
+<link rel="stylesheet" href="/static/style.css">
+<script src="/static/script.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Upload Resumes</h1>
+
+<form action="/result" method="POST" enctype="multipart/form-data">
+
+<div class="drop-zone" id="drop-zone">
+
+<p>Drag & Drop Resume Here</p>
+<input type="file" name="resume" multiple required>
+
+</div>
+
+<textarea name="jobdesc"
+placeholder="Enter Job Description Example: Python, Machine Learning, SQL"></textarea>
+
+<br>
+
+<button class="btn" onclick="showLoading()">Analyze Resume</button>
+
+</form>
+
+<div id="loading" class="loading">
+Analyzing resumes...
+</div>
+
+</div>
+
+</body>
+</html>
